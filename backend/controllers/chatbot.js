@@ -1,10 +1,4 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const express = require('express');
-const cors = require('cors');
-
-const app = express();
-app.use(cors());
-app.use(express.json());
 
 // Initialize Gemini API
 let genAI;
@@ -85,84 +79,75 @@ function getFallbackResponse(mood) {
   return responses[Math.floor(Math.random() * responses.length)];
 }
 
-// Process general messages
-app.post('/processMessage', async (req, res) => {
+
+// Controller functions
+async function processMessage(req, res) {
   try {
     const { message, mood } = req.body;
-    
     if (!message || !mood) {
       return res.status(400).json({ error: 'Message and mood are required' });
     }
-
     if (!['happy', 'sad', 'angry'].includes(mood.toLowerCase())) {
       return res.status(400).json({ error: 'Invalid mood. Must be happy, sad, or angry' });
     }
-
     let response;
     if (process.env.GEMINI_API_KEY) {
       response = await generateGeminiResponse(message, mood.toLowerCase());
     } else {
       response = getFallbackResponse(mood.toLowerCase());
     }
-
     res.json({ response });
   } catch (error) {
     console.error('Error processing message:', error);
     res.status(500).json({ error: 'Failed to process message' });
   }
-});
+}
 
-// Happy mood messages
-app.post('/happyMood', async (req, res) => {
+async function happyMood(req, res) {
   try {
     const { message } = req.body;
     if (!message) return res.status(400).json({ error: 'Message is required' });
-
     const response = process.env.GEMINI_API_KEY
       ? await generateGeminiResponse(message, 'happy')
       : getFallbackResponse('happy');
-
     res.json({ response });
   } catch (error) {
     console.error('Error processing happy message:', error);
     res.status(500).json({ error: 'Failed to process message' });
   }
-});
+}
 
-// Sad mood messages
-app.post('/sadMood', async (req, res) => {
+async function sadMood(req, res) {
   try {
     const { message } = req.body;
     if (!message) return res.status(400).json({ error: 'Message is required' });
-
     const response = process.env.GEMINI_API_KEY
       ? await generateGeminiResponse(message, 'sad')
       : getFallbackResponse('sad');
-
     res.json({ response });
   } catch (error) {
     console.error('Error processing sad message:', error);
     res.status(500).json({ error: 'Failed to process message' });
   }
-});
+}
 
-// Angry mood messages
-app.post('/angryMood', async (req, res) => {
+async function angryMood(req, res) {
   try {
     const { message } = req.body;
     if (!message) return res.status(400).json({ error: 'Message is required' });
-
     const response = process.env.GEMINI_API_KEY
       ? await generateGeminiResponse(message, 'angry')
       : getFallbackResponse('angry');
-
     res.json({ response });
   } catch (error) {
     console.error('Error processing angry message:', error);
     res.status(500).json({ error: 'Failed to process message' });
   }
-});
+}
 
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Ritu chatbot server running on port ${PORT}`));
+module.exports = {
+  processMessage,
+  happyMood,
+  sadMood,
+  angryMood
+};
