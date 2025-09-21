@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Kuromi Heart SVG -->
+  <defs>
+    <radialGradient id="heartGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#f8bbd0" />
+      <stop offset="100%" stop-color="#e91e63" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Heart Shape -->
+  <path d="M50 90c-1.5 0-3-0.5-4.2-1.5C35.7 80.2 10 58.1 10 35c0-13.8 11.2-25 25-25 7.1 0 13.8 3 18.5 8.2l-3.5 5.2 3.5-5.2C58.2 13 64.9 10 72 10c13.8 0 25 11.2 25 25 0 23.1-25.7 45.2-35.8 53.5C53 89.5 51.5 90 50 90z" 
+        fill="url(#heartGradient)" stroke="#c2185b" stroke-width="2" />
+  
+  <!-- Kuromi Face -->
+  <g transform="translate(30, 35) scale(0.4)">
+    <!-- Face -->
+    <circle cx="50" cy="50" r="35" fill="#2c2c2c" />
+    
+    <!-- Eyes -->
+    <ellipse cx="35" cy="45" rx="7" ry="9" fill="white" />
+    <circle cx="35" cy="48" r="3" fill="black" />
+    
+    <ellipse cx="65" cy="45" rx="7" ry="9" fill="white" />
+    <circle cx="65" cy="48" r="3" fill="black" />
+    
+    <!-- Mouth -->
+    <path d="M40 65 Q50 75 60 65" stroke="white" stroke-width="3" fill="none" />
+    
+    <!-- Ears -->
+    <path d="M25 20 L15 5 L35 10 Z" fill="#2c2c2c" />
+    <path d="M75 20 L85 5 L65 10 Z" fill="#2c2c2c" />
+    
+    <!-- Bow -->
+    <path d="M50 15 L40 10 L45 20 L50 15 L55 20 L60 10 Z" fill="#e91e63" />
+    <circle cx="50" cy="15" r="3" fill="#f8bbd0" />
+  </g>
+</svg>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achum's Special Place</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Indie+Flower&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="landing-page" id="landing-page">
+        <div class="floating-elements">
+            <div class="tulip tulip1"></div>
+            <div class="tulip tulip2"></div>
+            <div class="tulip tulip3"></div>
+            <div class="sparkle sparkle1"></div>
+            <div class="sparkle sparkle2"></div>
+            <div class="sparkle sparkle3"></div>
+            <div class="sparkle sparkle4"></div>
+            <div class="sparkle sparkle5"></div>
+            <!-- Wave Happy Audio for Hope Page -->
+      
+        </div>
+        
+        <div class="greeting-container animate__animated animate__bounceIn">
+            <h1 class="greeting">HIEEEE ACHUMMMMM!!! HOW ARE YOU FEELING TODAY?? </h1>
+            
+            <div class="mood-buttons">
+                <button class="mood-button happy-button" id="happy-button">
+                    <span class="mood-text">HAPPY</span>
+                    <img src="images/kuromi-happy.gif" alt="Kuromi Happy" class="kuromi-icon">
+
+                </button>
+                
+                <button class="mood-button sad-button" id="sad-button">
+                    <span class="mood-text">SAD</span>
+                    <img src="images/kuromi-sad.png" alt="Kuromi Sad" class="kuromi-icon">
+                </button>
+                
+                <button class="mood-button angry-button" id="angry-button">
+                    <span class="mood-text">ANGRY</span>
+                    <img src="images/kuromi-angry.gif" alt="Kuromi Angry" class="kuromi-icon">
+                </button>
+            </div>
+            
+            <div class="special-options">
+                <button class="special-button gallery-button" id="gallery-button">
+                    <span class="special-text">Ritu's Gallery</span>
+                    <span class="special-icon">📸</span>
+                </button>
+                
+                <button class="special-button ai-button" id="ai-button">
+                    <span class="special-text">Talk to Ritu's AI</span>
+                    <span class="special-icon">🤖</span>
+                </button>
+            </div>
+        </div>
+        
+    
+        <div class="music-control">
+            <button id="music-toggle" class="music-button">
+                <span class="music-icon">🎵</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Happy Portal -->
+    <div class="portal happy-portal" id="happy-portal">
+    <!-- Wave Happy Audio for Happy Page -->
+    <audio id="wave-happy-happy" src="audio/happy-wave.mp3"></audio>
+    <div class="portal-content">
+            <div class="portal-header">
+                <button class="back-button" id="happy-back">← BACK</button>
+                <h2 class="portal-title">YAYYYY ACHUMMM!!! LET'S HAVE FUN!!! 😭🙏💖</h2>
+            </div>
+            
+            <div class="portal-body">
+                <div class="game-section">
+                    <div class="game" id="catch-hearts">
+                        <h3>YAYYYY ACHUMMMMM, Let's Catch Kuromis! 💖</h3>
+                        <p class="diary-entry-text">Time to collect some love and happiness...</p>
+                        <div class="game-container" id="hearts-game-container"></div>
+                        <button class="start-game" id="start-hearts">START GAME!</button>
+                    </div>
+                    
+                    <div class="game" id="memory-balloon">
+                        <h3>Memory Balloon Pop! 🎈</h3>
+                        <div class="game-container" id="balloon-game-container"></div>
+                        <button class="start-game" id="start-balloon">START GAME!</button>
+                    </div>
+                    
+                    <div class="game" id="achum-quiz">
+                        <h3>Achum Quiz! 🌟</h3>
+                        <div class="game-container" id="quiz-game-container"></div>
+                        <button class="start-game" id="start-quiz">START QUIZ!</button>
+                    </div>
+                </div>
+                
+                <div class="chat-section">
+                    <div class="chat-container">
+                        <div class="chat-messages" id="happy-messages"></div>
+                        <div class="chat-input">
+                            <input type="text" id="happy-chat-input" placeholder="Say something to Ritu...">
+                            <button id="happy-send-button">SEND!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floating-elements happy-elements">
+            <div class="heart heart1"></div>
+            <div class="heart heart2"></div>
+            <div class="heart heart3"></div>
+            <div class="butterfly butterfly1"></div>
+            <div class="butterfly butterfly2"></div>
+            <div class="tulip-petal petal1"></div>
+            <div class="tulip-petal petal2"></div>
+            <div class="tulip-petal petal3"></div>
+        </div>
+    </div>
+    
+    <!-- Sad Portal -->
+    <div class="portal sad-portal" id="sad-portal">
+        <div class="portal-content">
+            <div class="portal-header">
+                <button class="back-button" id="sad-back">← BACK</button>
+                <h2 class="portal-title">ACHUMMMMM... I'M RIGHT HERE FOR YOU 😭🙏💙</h2>
+            </div>
+            
+            <div class="portal-body">
+                <div class="diary-date">Today's Comfort Corner 💙</div>
+                <div class="comfort-section">
+                    <div class="comfort-feature" id="virtual-hug">
+                        <h3>Come here ACHUM , Lemme give you a hug 🤗</h3>
+                        <p class="diary-entry-text">When things get tough, a warm hug makes everything better...</p>
+                        <div class="hug-container" id="hug-container">
+                            <img src="images/hug.jpg" alt="Kuromi Hug" class="hug-image">
+                            <button class="hug-button" id="virtual-hug-button">GET A HUG</button>
+                        </div>
+                    </div>
+                    
+                    <div class="comfort-feature" id="pet-animals">
+                        <h3>Pet Cute Animals 🐱</h3>
+                        <div class="pets-container" id="pet-animals-container"></div>
+                    </div>
+                    
+                    <div class="comfort-feature" id="breathe-relax">
+                        <h3>Breathe & Relax 🌸</h3>
+                        <div class="breathe-container" id="breathe-container">
+                            <div class="breathe-circle" id="breathe-circle"></div>
+                            <p class="breathe-text">Breathe in... and out...</p>
+                            <button class="breathe-button" id="breathe-exercise">START</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-section">
+                    <div class="chat-container">
+                        <div class="chat-messages" id="sad-messages"></div>
+                        <div class="chat-input">
+                            <input type="text" id="sad-chat-input" placeholder="Talk to Ritu...">
+                            <button id="sad-send-button">SEND!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floating-elements sad-elements">
+            <div class="tulip sad-tulip1"></div>
+            <div class="tulip sad-tulip2"></div>
+            <div class="star star1"></div>
+            <div class="star star2"></div>
+            <div class="star star3"></div>
+            <div class="sparkle sad-sparkle1"></div>
+            <div class="sparkle sad-sparkle2"></div>
+        </div>
+    </div>
+    
+    <!-- Angry Portal -->
+    <div class="portal angry-portal" id="angry-portal">
+        <div class="portal-content">
+            <div class="portal-header">
+                <button class="back-button" id="angry-back">← BACK</button>
+                <h2 class="portal-title">OMG ACHUMMMMM!!! LET IT ALL OUT!!! 😭🙏💖</h2>
+            </div>
+            
+            <div class="portal-body">
+                <div class="diary-date">Today's Release Journal 💖</div>
+                <div class="vent-section">
+                    <div class="vent-game" id="whack-a-ritu">
+                        <h3>Dear Diary, Time to Release Some Stress! 🔨</h3>
+                        <p class="diary-entry-text">Sometimes we just need to let it all out...</p>
+                        <div class="whack-container" id="whack-game-container"></div>
+                        <button class="start-game" id="whack-ritu">START WHACKING!</button>
+                    </div>
+                    
+                    <div class="vent-game" id="beat-ritu">
+                        <h3>Beat Ritu! 🥊</h3>
+                        <div class="beat-container" id="beat-game-container"></div>
+                        <button class="start-game" id="beat-ritu">START GAME!</button>
+                    </div>
+                    
+                    <div class="vent-game" id="pop-clouds">
+                        <h3>Pop Angry Clouds! ☁️</h3>
+                        <div class="clouds-container" id="cloud-game-container"></div>
+                        <button class="start-game" id="pop-clouds">START POPPING!</button>
+                    </div>
+                </div>
+                
+                <div class="chat-section">
+                    <div class="chat-container">
+                        <div class="chat-messages" id="angry-messages"></div>
+                        <div class="chat-input">
+                            <input type="text" id="angry-chat-input" placeholder="Vent to Ritu...">
+                            <button id="angry-send-button">SEND!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floating-elements angry-elements">
+            <div class="confetti confetti1"></div>
+            <div class="confetti confetti2"></div>
+            <div class="confetti confetti3"></div>
+            <div class="confetti confetti4"></div>
+            <div class="confetti confetti5"></div>
+        </div>
+    </div>
+    
+    <!-- Easter Eggs -->
+    <div class="easter-eggs">
+        <div class="hidden-kuromi" id="hidden-kuromi-1"></div>
+        <div class="hidden-kuromi" id="hidden-kuromi-2"></div>
+        <div class="hidden-tulip" id="hidden-tulip-1"></div>
+        <div class="hidden-hanni" id="hidden-hanni-1"></div>
+        <div class="hidden-wave" id="hidden-wave-1"></div>
+        <div class="hidden-lays" id="hidden-lays-1"></div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/happy.js"></script>
+    <script src="js/sad.js"></script>
+    <script src="js/angry.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // Gallery and AI button functionality
+        document.getElementById('gallery-button').addEventListener('click', function() {
+            window.location.href = 'gallery.html';
+        });
+        
+        document.getElementById('ai-button').addEventListener('click', function() {
+            window.open('https://aistudio.instagram.com/ai/832378236120123/?utm_source=mshare', '_blank');
+        });
+    </script>
+</body>
+</html>
